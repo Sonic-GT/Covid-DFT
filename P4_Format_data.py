@@ -38,6 +38,8 @@ for file in os.listdir(Tables_dir):
     plt.scatter(df_out[Day], df_out[Theoretical_cases], label='Casi teorici')
 
     plt.xlabel('Giorni')
+    plt.ylabel('Nuovi casi')
+    plt.subplots_adjust(left=0.15)
     plt.title(f'Casi SARS-COV2 — {file}')
     plt.legend()
     plt.grid(True)
