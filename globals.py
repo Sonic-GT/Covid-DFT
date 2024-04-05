@@ -14,8 +14,10 @@ Fourier_magnitudes_suff_2 = '_zero_and_tolerance'
 Fourier_magnitudes_dir = First_dir + Fourier_magnitudes_suff
 Formatted_suff = '_formatted'
 Formatted_dir = First_dir + Formatted_suff
-Graph_suff = '_graph'
-Graph_dir = First_dir + Graph_suff
+Graph_cases_suff = '_cases_graph'
+Graph_cases_dir = First_dir + Graph_cases_suff
+Graph_freq_suff = '_freq_graph'
+Graph_freq_dir = First_dir + Graph_freq_suff
 
 # Columns
 Day = 'Day'

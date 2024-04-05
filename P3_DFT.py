@@ -5,15 +5,12 @@ import pandas as pd
 import math
 import os
 
-chosen_freq = Freq_num
-
-
 for file in os.listdir(Tables_dir):
-    Freq_num = Italy_freq if "Italy" in file else chosen_freq
+    chosen_freq = Italy_freq if "Italy" in file else Freq_num
 
     file = file.strip(Tables_suff + ".csv")
     data = pd.read_csv(f"{Tables_dir}/{file}{Tables_suff}.csv", sep=";")
-    A = data[['a0'] + [ab + str(i + 1) for i in range(Freq_num) for ab in ['a', 'b']]].to_numpy()
+    A = data[['a0'] + [ab + str(i + 1) for i in range(chosen_freq) for ab in ['a', 'b']]].to_numpy()
     b = data[[New_cases]].to_numpy()
     AN = A.transpose() @ A
     bn = A.transpose() @ b
