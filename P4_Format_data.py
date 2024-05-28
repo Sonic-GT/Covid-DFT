@@ -48,7 +48,7 @@ for file in os.listdir(Tables_dir):
 
     # Frequency graph
     x_val = [0]+[(n+1) for n in range(chosen_freq)]
-    y_val = [df_dft.iloc[0, 0]] + [pow((pow(df_dft.iloc[2*n+1, 0], 2) + pow(df_dft.iloc[2*(n+1), 0], 2)), 0.5)/2 for n in range(chosen_freq)]
+    y_val = [df_dft.iloc[0, 0]/2] + [pow((pow(df_dft.iloc[2*n+1, 0], 2) + pow(df_dft.iloc[2*(n+1), 0], 2)), 0.5)/2 for n in range(chosen_freq)]
     plt.plot(x_val, y_val)
 
     plt.xlabel('Frequenza')
