@@ -1,5 +1,5 @@
 # Options
-Freq_num = 9
+Freq_num = 20
 Italy_freq = 6
 Year_num = 2
 
